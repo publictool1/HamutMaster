@@ -120,48 +120,48 @@ li {
     margin: 200px 0px;
 }
 
-/* Стили для контейнера блока */
 .container__connect {
     display: flex;
-    justify-content: space-between; /* Распределение элементов по краям контейнера */
-    align-items: center; /* Выравнивание элементов по вертикали по центру */
-    padding: 40px; /* Внутренние отступы для контейнера */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 40px; 
+    align-items: flex-start;
 }
 
-/* Стили для левой стороны блока */
 .left-sidee {
-    flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
-    padding-right: 20px; /* Внутренний отступ справа, чтобы создать разделение */
-    border-right: 2px solid #fff; /* Цвет и стиль правой вертикальной линии */
+    flex: 1; 
+    padding-right: 20px; 
 }
 
-/* Стили для правой стороны блока */
 .right-sidee {
-    flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
-    padding-left: 20px; /* Внутренний отступ слева, чтобы создать разделение */
+    flex: 1; 
+    padding-left: 20px; 
+    border-left: 2px solid #fff; 
 }
 
-/* Стили для заголовков внутри блока */
 .titlee {
-    font-size: 24px; /* Размер текста заголовка */
-    margin-bottom: 10px; /* Отступ между заголовком и текстом */
-    text-align: center; /* Выравнивание текста заголовка по центру */
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    text-align: center;
 }
 
-/* Стили для текста внутри блока */
 .textt {
-    font-size: 18px; /* Размер текста */
-    line-height: 1.6; /* Межстрочное расстояние для легкости чтения */
-    text-align: center; /* Выравнивание текста по центру */
-    color: #555; /* Цвет текста */
+    font-size: 18px; 
+    line-height: 1.6; 
+    text-align: center; 
+    color: #555; 
 }
 
 .textt p {
     margin: 20px 0px;
 }
 
+.connect {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
 
-/* Анимации */
 @keyframes slideInUp {
     from {
         transform: translateY(100%);
@@ -184,7 +184,6 @@ li {
     }
 }
 
-/* Стили для блока, который будет появляться и исчезать */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -218,14 +217,11 @@ li {
     }
 }
 
-/* Общий медиа-запрос для устройств с шириной экрана менее 768px (мобильные устройства) */
 @media screen and (max-width: 768px) {
-    /* Изменения для всего контента, когда экран узкий, например, уменьшение отступов */
     body {
         font-size: 14px;
     }
 
-    /* Изменения для шапки */
     header {
         padding: 10px;
     }
@@ -266,10 +262,15 @@ li {
 }
 
 @media screen and (max-width: 425px) {
-    .infoo {
+    .infoo,
+    .info {
+        font-size: 14px;
         width: 100%;
         margin: 0;
-        line-height: 0%;
+    }
+
+    h3 {
+        font-size: 18px;
     }
 
     .right-side {
@@ -280,11 +281,9 @@ li {
         height: 70%;
     }
 
-    .textt p {
-        margin: 0%;
-    }
-
     .container__connect {
+        display: flex;
+        flex-direction: column;
         padding: 0px 15px;
     }
 }
