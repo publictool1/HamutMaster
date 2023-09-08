@@ -1,0 +1,290 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.under-header_container {
+    background-image: url(./images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.under-header_container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.second {
+    flex-direction: row-reverse;
+}
+
+.container__connect {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.left-side img {
+    width: 600px;
+    height: 100%;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+li {
+    margin: 10px 0px;
+    list-style: decimal;
+}
+
+/* Обновленные стили для контактов и текста */
+.title,
+.titlee,
+.titleee {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center; /* Центрирование текста */
+}
+
+.info,
+.infoo,
+.infooo {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center; /* Центрирование текста */
+    color: #ffffff92; /* Цвет текста для контактов и другого текста */
+}
+
+.infoo {
+    width: 450px;
+    margin: 0px 50px;
+    color: black;
+}
+
+/* Стили для слайдера */
+.wrapper {
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    height: 450px;
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+#slider_container {
+    margin: 200px 0px;
+}
+
+/* Стили для контейнера блока */
+.container__connect {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по краям контейнера */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    padding: 40px; /* Внутренние отступы для контейнера */
+}
+
+/* Стили для левой стороны блока */
+.left-sidee {
+    flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
+    padding-right: 20px; /* Внутренний отступ справа, чтобы создать разделение */
+    border-right: 2px solid #fff; /* Цвет и стиль правой вертикальной линии */
+}
+
+/* Стили для правой стороны блока */
+.right-sidee {
+    flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
+    padding-left: 20px; /* Внутренний отступ слева, чтобы создать разделение */
+}
+
+/* Стили для заголовков внутри блока */
+.titlee {
+    font-size: 24px; /* Размер текста заголовка */
+    margin-bottom: 10px; /* Отступ между заголовком и текстом */
+    text-align: center; /* Выравнивание текста заголовка по центру */
+}
+
+/* Стили для текста внутри блока */
+.textt {
+    font-size: 18px; /* Размер текста */
+    line-height: 1.6; /* Межстрочное расстояние для легкости чтения */
+    text-align: center; /* Выравнивание текста по центру */
+    color: #555; /* Цвет текста */
+}
+
+.textt p {
+    margin: 20px 0px;
+}
+
+
+/* Анимации */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* Стили для блока, который будет появляться и исчезать */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+    margin: 10rem 0;
+}
+
+.scroll-reveal.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+@media screen and (max-width: 1150px) {
+    .right-side {
+        padding: 50px 100px
+    }
+
+    .container {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .left-side img {
+        width: 100%;
+    }
+
+    .container__connect {
+        padding: 20px;
+    }
+}
+
+/* Общий медиа-запрос для устройств с шириной экрана менее 768px (мобильные устройства) */
+@media screen and (max-width: 768px) {
+    /* Изменения для всего контента, когда экран узкий, например, уменьшение отступов */
+    body {
+        font-size: 14px;
+    }
+
+    /* Изменения для шапки */
+    header {
+        padding: 10px;
+    }
+
+    /* Изменения для разделов с текстом */
+    .infoo,
+    .info,
+    .infooo {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    /* Изменения для контейнера блока связи */
+
+    /* Изменения для левой и правой стороны блока */
+    .left-sidee,
+    .right-sidee {
+        flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
+        padding: 10px; /* Внутренний отступ */
+        border: none; /* Убираем границу между блоками */
+    }
+
+    /* Изменения для заголовков внутри блока */
+    .titlee {
+        font-size: 20px; /* Уменьшаем размер текста заголовка */
+    }
+
+    /* Изменения для текста внутри блока */
+    .textt {
+        font-size: 16px; /* Уменьшаем размер текста */
+    }
+
+    /* Изменения для изображений внутри блока */
+    .left-sidee img {
+        width: 100%; /* Ширина изображения на всю ширину блока */
+        height: auto; /* Автоматическая высота */
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .infoo {
+        width: 100%;
+        margin: 0;
+        line-height: 0%;
+    }
+
+    .right-side {
+        padding: 20px 10px;
+    }
+
+    .slide img { 
+        height: 70%;
+    }
+
+    .textt p {
+        margin: 0%;
+    }
+
+    .container__connect {
+        padding: 0px 15px;
+    }
+}
