@@ -40,6 +40,25 @@ header {
     color: #ff6600; /* Цвет для активного раздела */
 }
 
+.textt a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.textt span {
+    color: #fff;
+}
+
+.textt a:hover {
+    color: #ff6600; /* Цвет при наведении */
+}
+
+/* Стили для активного (выбранного) раздела */
+.textt a.active {
+    color: #ff6600; /* Цвет для активного раздела */
+}
+
 .under-header_container {
     background-image: url(./images/bg.jpg);
     background-size: cover;
