@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
     <script defer src="animated.js"></script>
+    <script defer src="scroll.js"></script>
 </head>
 <body>
 
     <header>
         <div class="header">
-            <h2>HamutMaster</h2>
+            <div class="header_title">
+                <h2>HamutMaster</h2>
+            </div>
+            <div class="header_links">
+                <a href="#about">О нас</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#applications">Применение</a>
+                <a href="#contacts">Контакты</a>
+            </div>
         </div>
     </header>
 
@@ -27,7 +36,7 @@
         </div>
     </section>
 
-    <section class="scroll-reveal">
+    <section id="about" class="scroll-reveal">
         <div class="container">
             <div class="left-side">
                 <img src="./images/img1.jpg" alt="bg">
@@ -52,39 +61,9 @@
             </div>
         </div>
     </section>
-
-    <section class="scroll-reveal">
+    
+    <section id="advantages" class="scroll-reveal">
         <div class="container second">
-            <div class="left-side">
-                <img src="./images/img2.jpg" alt="bg">
-            </div>
-            <div class="right-side">
-                <div class="title">
-                    <h2>Применение</h2>
-                </div>
-                <div class="info">
-                    <h3>Наши опорные хамуты идеально подходят для широкого спектра строительных проектов, включая:</h3>
-                    <ul>
-                        <li><strong> Строительство фундаментов и подпорных стен:</strong> Наши продукты обеспечивают 
-                            надежную поддержку и стабильность конструкций.
-                        </li>
-                        <li><strong> Мосты и виадуки: </strong> Мы предоставляем хамуты, 
-                            которые специально разработаны для инфраструктурных проектов, гарантируя их долгий срок службы.
-                        </li>
-                        <li><strong> Дорожные работы: </strong> Надежные опорные хамуты 
-                            необходимы при строительстве и реконструкции дорог.
-                        </li>
-                        <li><strong> Инфраструктурные проекты: </strong> Наша продукция широко 
-                            используется в проектах по созданию коммуникационных и энергетических сетей.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="scroll-reveal">
-        <div class="container">
             <div class="left-side">
                 <img src="./images/img3.jpg" alt="bg">
             </div>
@@ -110,14 +89,58 @@
         </div>
     </section>
 
+    <section id="applications" class="scroll-reveal">
+        <div class="container">
+            <div class="left-side grid">
+                <div class="image-grid">
+                    <div class="large-image">
+                        <img src="./images/img4.jpg" alt="Image 3">
+                    </div>
+                    <div class="small-image">
+                        <img src="./images/5.jpeg" alt="Image 2">
+                    </div>
+                    <div class="small-image">
+                        <img src="./images/img6.jpg" alt="Image 4">
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="right-side">
+                <div class="title">
+                    <h2>Применение</h2>
+                </div>
+                <div class="info">
+                    <h3>Наши опорные хамуты идеально подходят для широкого спектра строительных проектов, включая:</h3>
+                    <ul>
+                        <li><strong>Строительство фундаментов и подпорных стен:</strong> Наши продукты обеспечивают 
+                            надежную поддержку и стабильность конструкций.
+                        </li>
+                        <li><strong>Мосты и виадуки:</strong> Мы предоставляем хамуты, 
+                            которые специально разработаны для инфраструктурных проектов, гарантируя их долгий срок службы.
+                        </li>
+                        <li><strong>Дорожные работы:</strong> Надежные опорные хамуты 
+                            необходимы при строительстве и реконструкции дорог.
+                        </li>
+                        <li><strong>Инфраструктурные проекты:</strong> Наша продукция широко 
+                            используется в проектах по созданию коммуникационных и энергетических сетей.
+                        </li>
+                        <li><strong>Плиты бетонные:</strong> Опорные хамуты также находят свое применение при установке бетонных плит, обеспечивая надежную поддержку и стабильность этой конструкции.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="slider_container">
         <div class="wrapper">
             <div class="slider">
                 <div class="slide"><img src="./images/slider/1.jpg" alt="Слайд 1"></div>
                 <div class="slide"><img src="./images/slider/7.jpg" alt="Слайд 2"></div>
                 <div class="slide"><img src="./images/slider/11.jpg" alt="Слайд 3"></div>
-                <div class="slide"><img src="./images/slider/4.jpg" alt="Слайд 3"></div>
-                <div class="slide"><img src="./images/slider/12.jpg" alt="Слайд 3"></div>
+                <div class="slide"><img src="./images/slider/4.jpg" alt="Слайд 4"></div>
+                <div class="slide"><img src="./images/slider/12.jpg" alt="Слайд 5"></div>
             </div>
         </div>
     </section>
@@ -138,7 +161,7 @@
                 </div>
             </div>
             <div class="right-sidee">
-                <div class="titlee">
+                <div id="contacts" class="titlee">
                     <h2>Контакты</h2>
                 </div>
                 <div class="textt">
@@ -147,8 +170,8 @@
                         ваши строительные идеи в жизнь.</p>
                     <p>Наши специалисты обладают богатым опытом в сфере строительства и всегда готовы поделиться своими знаниями и советами. Мы ценим каждого клиента и гарантируем индивидуальный подход к каждому проекту.</p>
                     <p>Не стесняйтесь задавать вопросы, уточнять детали и просить консультацию. Мы с удовольствием поможем вам в реализации ваших строительных задач.</p>
-                    <p class="connect">Телефон: +996 707 444 233  - Кайрат</p>
-                    <p class="connect">WhatsApp: <a href="https://wa.me/+996707444233"> +996 707 444 233</a>  - Кайрат</p>
+                    <p class="connect"> Телефон:  +996 707 444 233 - Кайрат</p>
+                    <p class="connect">WhatsApp: <a href="https://wa.me/+996707444233"> +996 707 444 233</a> - Кайрат</p>
                 </div>
             </div>
         </div>

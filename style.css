@@ -18,6 +18,28 @@ header {
     padding: 20px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header_links a:hover {
+    color: #ff6600; /* Цвет при наведении */
+}
+
+/* Стили для активного (выбранного) раздела */
+.header_links a.active {
+    color: #ff6600; /* Цвет для активного раздела */
+}
+
 .under-header_container {
     background-image: url(./images/bg.jpg);
     background-size: cover;
@@ -78,7 +100,6 @@ li {
 .infooo {
     font-size: 18px;
     line-height: 1.6;
-    text-align: center; /* Центрирование текста */
     color: #ffffff92; /* Цвет текста для контактов и другого текста */
 }
 
@@ -156,6 +177,10 @@ li {
     margin: 20px 0px;
 }
 
+strong {
+    color: rgb(255, 255, 255)
+}
+
 .connect {
     display: flex;
     justify-content: flex-end;
@@ -198,6 +223,31 @@ li {
     transition-delay: 0.7s;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка для большой картинки */
+    gap: 10px; /* Промежуток между элементами */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки для маленьких картинок */
+    gap: 10px; /* Промежуток между элементами */
+}
+
+.large-image {
+    grid-column: span 2; /* Занимает две колонки в ширину */
+}
+
+.grid img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* При необходимости можно настроить размеры изображений и промежутки между ними */
+
+
 @media screen and (max-width: 1150px) {
     .right-side {
         padding: 50px 100px
@@ -234,9 +284,6 @@ li {
         padding: 20px;
     }
 
-    /* Изменения для контейнера блока связи */
-
-    /* Изменения для левой и правой стороны блока */
     .left-sidee,
     .right-sidee {
         flex: 1; /* Распределение пространства в соотношении 1:1 между левой и правой сторонами */
@@ -244,20 +291,41 @@ li {
         border: none; /* Убираем границу между блоками */
     }
 
-    /* Изменения для заголовков внутри блока */
     .titlee {
         font-size: 20px; /* Уменьшаем размер текста заголовка */
     }
 
-    /* Изменения для текста внутри блока */
     .textt {
         font-size: 16px; /* Уменьшаем размер текста */
     }
 
-    /* Изменения для изображений внутри блока */
     .left-sidee img {
         width: 100%; /* Ширина изображения на всю ширину блока */
         height: auto; /* Автоматическая высота */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container__connect {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+
+    .header_links {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .connect {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .infoo {
+        width: auto;
     }
 }
 
@@ -285,5 +353,17 @@ li {
         display: flex;
         flex-direction: column;
         padding: 0px 15px;
+    }
+
+    .header_links {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .connect {
+        flex-direction: column;
+        gap: 0px;
     }
 }
