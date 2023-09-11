@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: cursive;
 }
 
 body {
@@ -263,8 +263,35 @@ strong {
     border-radius: 10px;
 }
 
+/* Стили для раздела с размерами и ценой */
+.price-container {
+    height: 180px;
+    background-color: #5c5b5b;
+    text-align: center;
+    padding: 20px;
+}
 
-/* При необходимости можно настроить размеры изображений и промежутки между ними */
+.price_info {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Стили для подсветки текста с классом "underline" */
+.underline {
+    text-decoration: underline; /* Подчеркивание текста */
+    color: #fd7045fc;
+}
+
+.price {
+    display: flex;
+    gap: 10px;
+}
+
 
 
 @media screen and (max-width: 1150px) {
